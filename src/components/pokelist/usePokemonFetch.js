@@ -9,6 +9,7 @@ const usePokemonFetch = (
     const [error, setError] = useState(null);
 
     const [isMounted, setIsMounted] = useState(false);
+
     useEffect(()=>{
         if( !isMounted) {
             setIsMounted(true);
