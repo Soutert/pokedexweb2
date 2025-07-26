@@ -7,8 +7,12 @@ function App() {
     <>
       <header className="main-header">
         <nav className="main-header-nav">
-          <a href="/" className="home-link">
-            <img src="/pokeball.svg" alt="Pokeball" className="home-icon" />
+          <a href={import.meta.env.BASE_URL} className="home-link">
+            <img
+              src={`${import.meta.env.BASE_URL}pokeball.svg`}
+              alt="Pokeball"
+              className="home-icon"
+            />
             <span>Home</span>
           </a>
         </nav>
