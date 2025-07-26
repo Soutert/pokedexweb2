@@ -67,15 +67,18 @@ const PokeList = () => {
               })}
             </section>
           </div>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              setOffset(offset + 20);
-            }}
-          >
-            Next
-          </button>
+          <div className="load-more-container">
+            <button
+              className="load-more-button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setOffset(offset + 20);
+              }}
+            >
+              Siguiente
+            </button>
+          </div>
         </>
       )}
       {hasError && <strong>Algo sucedió mal y no se puede cargar</strong>}
