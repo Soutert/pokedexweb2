@@ -4,11 +4,10 @@ const Card = ({
   imgUrl,
   title,
   description,
-  types = [],
   actionLabel,
   action = () => {},
 }) => {
-return (
+  return (
     <div className="card">
       <div className="card-header">
         <img src={imgUrl} alt={title} />
@@ -16,16 +15,13 @@ return (
       </div>
 
       <div className="card-body">
-        <p>{description}</p>
-
-        {/* Types Badges */}
-        <div className="flex gap-1 mt-2 flex-wrap justify-center">
-          {types.map((type) => (
+        <div className="flex flex-wrap gap-1 justify-center">
+          {description.split(",").map((type) => (
             <span
               key={type}
-              className="bg-green-800 text-white text-xs px-2 py-1 rounded-full"
+              className="text-xs bg-green-800 text-white px-2 py-1 rounded-full font-mono"
             >
-              {type}
+              [{type.trim()}]
             </span>
           ))}
         </div>
@@ -37,4 +33,5 @@ return (
     </div>
   );
 };
+
 export default Card;

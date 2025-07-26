@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .card {
-  @apply max-w-64 border rounded-xl shadow-lg overflow-hidden bg-red-600 transition-transform duration-200 hover:scale-105 hover:shadow-2xl;
+  @apply flex flex-col justify-between h-[260px] w-48 border rounded-xl shadow-lg overflow-hidden bg-red-600 transition-transform duration-200 hover:scale-105 hover:shadow-2xl;
 }
 
 .card-header {
@@ -9,7 +9,7 @@
 }
 
 .card-header img {
-    @apply w-full h-full object-cover;
+  @apply w-full object-contain;
 }
 
 .card-header h1 {
@@ -17,13 +17,13 @@
 }
 
 .card-body {
-    @apply px-3 py-2 bg-green-900 text-green-100;
+  @apply flex-1 px-2 py-1 bg-green-900 text-green-100 flex items-center justify-center;
 }
 
 .card-footer {
-    @apply mt-2 flex flex-row gap-2 bg-stone-800 p-2; 
+  @apply bg-red-600 flex justify-center items-center p-2;
 }
 
 .card-footer button {
-    @apply bg-blue-500 hover:bg-blue-400 text-white py-2 px-3 rounded shadow flex-1 transition;
+  @apply bg-blue-500 hover:bg-blue-400 text-white py-1 px-2 text-xs rounded shadow transition;
 }
